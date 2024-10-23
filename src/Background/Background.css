@@ -1,0 +1,37 @@
+/* Container for background effects */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow:visible;
+    z-index:auto;
+  }
+  
+  /* Keyframes for water ripple effect */
+  @keyframes ripple {
+    0% { background-size: 100% 100%; }
+    50% { background-size: 120% 120%; }
+    100% { background-size: 100% 100%; }
+  }
+  
+  /* Glowing white smoke effect */
+  .smoke-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(159, 236, 224, 0.829), transparent);
+    filter: blur(200px);
+    animation: smokeGlow 20s infinite ease-in-out;
+  }
+  
+  /* Keyframes for glowing white smoke */
+  @keyframes smokeGlow {
+    20% { opacity: 50; transform: translateY(0); }
+    50% { opacity: 30; transform: translateY(-20px); }
+    100% { opacity: 100; transform: translateY(0); }
+  }
+  

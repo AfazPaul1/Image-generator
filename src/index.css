@@ -1,0 +1,77 @@
+/* Full-screen animated gradient background with bubbles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(270deg, #12a187, #facaa1, #f8a1e0, #ace0f9);
+    background-size: 800% 800%;
+    animation: gradientAnimation 12s ease infinite;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Keyframes for smooth background gradient animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Bubble animation */
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(252, 176, 176);
+    border-radius: 50%;
+    animation: bubbleUp 10s linear infinite, bubbleColorChange 2s linear infinite;
+    opacity: 0.6;
+  }
+  
+  /* Different sizes for bubbles */
+  .bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    animation-duration: 12s;
+    left: 25%;
+  }
+  .bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    animation-duration: 14s;
+    left: 50%;
+  }
+  .bubble:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    animation-duration: 16s;
+    left: 75%;
+  }
+  .bubble:nth-child(5) {
+    width: 120px;
+    height: 120px;
+    animation-duration: 18s;
+    left: 90%;
+  }
+  
+  /* Bubbles floating upward animation */
+  @keyframes bubbleUp {
+    0% {
+      transform: translateY(4);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(-120vh);
+      opacity: 10;
+    }
+  }
+  
+  /* Bubble color change every 2 seconds */
+  @keyframes bubbleColorChange {
+    20% { background-color: rgb(245, 154, 70); }
+    50% { background-color: rgb(247, 249, 250); }
+    70% { background-color: rgba(253, 123, 184, 0.986); }
+  }
+  
